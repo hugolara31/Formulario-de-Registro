@@ -16,24 +16,24 @@ import {
 import { useState } from "react"
 
 export const FormularioComponente = () => {
-    const [nombre, setNombre]= useState('')
-    const [apellido, setApellido]= useState('')
+   // const [nombre, setNombre]= useState('')
+    //const [apellido, setApellido]= useState('')
     const [email, setEmail]= useState('')
-    const [password, setPassword]= useState('')
-    const [password2, setPassword2]= useState('')
-    const [telefono, setTelefono]= useState('')
+    //const [password, setPassword]= useState('')
+    //const [password2, setPassword2]= useState('')
+    //const [telefono, setTelefono]= useState('')
     const [show, setShow] = useState(false)
     const [show2, setShow2] = useState(false)
 
-    const handleNombreChange = (e) => setNombre(e.target.value)
+    //const handleNombreChange = (e) => setNombre(e.target.value)
 
-    const handleApellidoChange = (e) => setApellido(e.target.value)
+//    const handleApellidoChange = (e) => setApellido(e.target.value)
 
-    const handlePasswordChange = (e) => setPassword(e.target.value)
+  //  const handlePasswordChange = (e) => setPassword(e.target.value)
   
-    const handlePassword2Change = (e) => setPassword2(e.target.value)
+    //const handlePassword2Change = (e) => setPassword2(e.target.value)
    
-    const handleTelefonoChange = (e) => setTelefono(e.target.value)
+    //const handleTelefonoChange = (e) => setTelefono(e.target.value)
   
 
     const handleEmailChange = (e) => setEmail(e.target.value)
@@ -42,24 +42,22 @@ export const FormularioComponente = () => {
     const handleClick = () => setShow(!show)
     const handleClick2 = () => setShow2(!show2)
 
-    const validarPassword2 = () => {
-        let pass = ("password").value
-        let pass2 = ("password2").value
-        if (pass.length != 0) {
-            if (pass == pass2) {
-                Message.textContent = "Password confirmada";
-            }
-            else {
-                Message.textContent = "Password no coincide"
-            }
-      
-        }
-        else {
-            alert("los campos no pueden quedar vacios");
-            message.textContent = "";
-
-        }
-    }
+        //const validarPassword2 = () => {
+        //let pass = ("password").value
+        //let pass2 = ("password2").value
+        //if (pass.length != 0) {
+            //if (pass == pass2) {
+              //  Message.textContent = "Password confirmada";
+            //}
+            //else {
+              //  Message.textContent = "Password no coincide"
+            //} 
+        //}
+        //else {
+          //  alert("los campos no pueden quedar vacios");
+            //message.textContent = "";
+      //  }
+    //}
 
 
 
@@ -81,13 +79,13 @@ export const FormularioComponente = () => {
         >
             <FormControl isRequired>
                 <FormLabel m="5px">Nombre</FormLabel>
-                <Input bg="white" m="5px" type="text" id="Nombre" placeholder='Nombre' value={nombre} onChange={handleNombreChange} expresiones={expresiones.nombre}/>
+                <Input bg="white" m="5px" type="text" id="Nombre" placeholder='Ingresar Nombre' />
                 <Text>Ingresa tu nombre</Text>
             </FormControl>
             <br />
             <FormControl isRequired>
                 <FormLabel m="5px">Apellido</FormLabel>
-                <Input bg="white" m="5px" type="text" id="Apellido" placeholder='Apellido' value={apellido} onChange={handleApellidoChange} expresiones={expresiones.nombre} />
+                <Input bg="white" m="5px" type="text" id="Apellido" placeholder='Ingresar Apellido'  />
                 <Text>Ingresa tu apellido</Text>
             </FormControl>
             <br />
@@ -107,7 +105,7 @@ export const FormularioComponente = () => {
                 <InputGroup >
                     <FormLabel m="5px" p="5px" >Telefono</FormLabel>
                     <InputLeftAddon m="5px" children='+54' />
-                    <Input bg="white" m="5px" type='tel' id="Telefono" placeholder='Numero de Telefono' value={telefono} onChange={handleTelefonoChange} expresiones={expresiones.telefono} />
+                    <Input bg="white" m="5px" type='tel' id="Telefono" placeholder='Numero de Telefono'  />
                   
                 </InputGroup>
             </Stack>
@@ -119,10 +117,9 @@ export const FormularioComponente = () => {
                     pr='4.5rem'
                     type={show ? 'text' : 'password'}
                     placeholder='Enter password'
-                    id="Password"
-                    value={password}
-                    onChange={handlePasswordChange}
-                    expresiones={expresiones.password}
+                    //value={password}
+                    //onChange={handlePasswordChange}
+                    //expresiones={expresiones.password}
                 />
                 
                 <InputRightElement width='4.5rem'>
@@ -140,10 +137,9 @@ export const FormularioComponente = () => {
                     pr='4.5rem'
                     type={show2 ? 'text' : 'password'}
                     placeholder='Confirm password'
-                    id="Password"
-                    value={password2}
-                    onChange={handlePassword2Change}
-                    expresiones={expresiones.password}
+                    //value={password2}
+                    //onChange={handlePassword2Change}
+                    //expresiones={expresiones.password}
                 />
                 <InputRightElement width='4.5rem'>
                     <Button m="5px" h='1.75rem' size='sm' onClick={handleClick2}>
@@ -154,7 +150,9 @@ export const FormularioComponente = () => {
             <Text id="menssage" m="1px"></Text>
             
             <ButtonGroup variant='outline' spacing='6'>
-                <Button p="5px" m="5px" bg="green" color="black" colorScheme='blue' value="submit" onClick={validarPassword2} >enviar</Button>
+                <Button p="5px" m="5px" bg="green" color="black" colorScheme='blue' value="submit" 
+                //onClick={validarPassword2} 
+                >enviar</Button>
                 <Button p="5px" m="5px" border="1px solid gray" >cancelar</Button>
             </ButtonGroup>
 
