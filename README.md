@@ -40,6 +40,3 @@ Nombre: Hugo Lara
 Correo Electrónico: hugolara0731@gmail.com
 
 ¡Gracias por utilizar este formulario en React! Espero que sea de utilidad en tu proyecto.
-Nombre: Hugo
-Correo Electrónico: hugo@email.com
-¡Gracias por utilizar este formulario en React! Espero que sea de utilidad en tu proyecto.
